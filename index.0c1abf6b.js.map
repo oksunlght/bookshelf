@@ -1,0 +1,1 @@
+{"mappings":"AACsBA,SAASC,cAAc","sources":["src/js/charity-widget.js"],"sourcesContent":["import { charityOrganizations } from './charity-orgs';\nconst sliderElement = document.querySelector('.charity-slider');\n\n// console.log(charityOrganizations);\n"],"names":["document","querySelector"],"version":3,"file":"index.0c1abf6b.js.map"}
