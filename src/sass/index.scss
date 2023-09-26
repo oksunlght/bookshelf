@@ -1,2 +1,20 @@
-@import './common';
-@import './example';
+// utils styles
+@import './utils/variables';
+@import './utils/v-hidden';
+@import './utils/breackpoints';
+
+// base styles
+@import './base/base';
+@import './base/reset';
+
+// Components
+@import './components/toggle';
+@import './components/header';
+@import './components/home';
+@import './components/side-menu';
+@import './components/single-category';
+@import './components/container';
+@import './components/footer';
+@import './components/charity';
+@import './components/backdrop';
+@import './components/modal';

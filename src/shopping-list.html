@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookshelf</title>
+    <link rel="stylesheet" href="./sass/index.scss" />
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+    <script type="module" src="./index.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-container">
+        <a href="/" class="logo">
+          <svg class="" width="24" height="24">
+            <use href="./images/sprite.svg#logo"></use>
+          </svg>
+          <svg class="" width="77" height="13">
+            <use href="./images/sprite.svg#logo-name"></use>
+          </svg>
+        </a>
+        <nav class="site-nav">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="/"><span class="nav-home">Home</span></a>
+            </li>
+            <li class="nav-item current">
+              <a href="./shopping-list.html" class="shop-list">Shopping List</a>
+              <svg class="" width="20" height="18">
+                <use href="./images/sprite.svg#cart"></use>
+              </svg>
+            </li>
+          </ul>
+        </nav>
+        <label class="switch">
+          <input type="checkbox" />
+          <span class="slider round"></span>
+        </label>
+      </div>
+    </header>
+    <main></main>
+    <footer></footer>
+  </body>
+</html>

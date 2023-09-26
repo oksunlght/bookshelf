@@ -1,0 +1,112 @@
+.pop-up {
+  padding: 40px;
+  width: 579px;
+  min-height: 465px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%) scale(100%);
+
+  border-radius: 18px;
+  border: 2px solid var(--main-text-color);
+  background-color: var(--main-white-cl);
+}
+
+.pop-up-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+
+  width: 28px;
+  height: 28px;
+
+  background-color: inherit;
+}
+
+.book-wrapper {
+  display: flex;
+  margin-bottom: 40px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.pop-book-image {
+  margin-right: 24px;
+  width: 192px;
+  height: 281px;
+
+  border-radius: 8px;
+}
+
+.buy-links {
+  display: flex;
+  align-items: center;
+}
+
+.amazon {
+  display: block;
+
+  width: 62px;
+  height: 18px;
+
+  background-image: url('../images/amazon.png');
+  background-size: 62px 19px;
+}
+
+.apple-books {
+  display: block;
+
+  width: 33px;
+  height: 32px;
+
+  background-image: url('../images/apple-book.png');
+  background-size: 33px 32px;
+}
+
+.purchase-button {
+  width: 499px;
+  padding: 20px 147px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.18px;
+
+  text-transform: uppercase;
+  border-radius: 40px;
+  border: 2px solid var(--accent-color);
+
+  background-color: inherit;
+}
+
+.pop-up-title {
+  margin-bottom: 8px;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.96px;
+}
+
+.pop-up-author {
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: var(--secondary-title-cl);
+  font-style: italic;
+  letter-spacing: -0.56px;
+}
+
+.pop-up-description {
+  margin-bottom: 20px;
+
+  font-size: 14px;
+  letter-spacing: -0.56px;
+}
+
+.buy-link-item {
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+}

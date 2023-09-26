@@ -1,0 +1,49 @@
+.category-list {
+  padding-right: 28px;
+  width: 356px;
+  max-height: 472px;
+
+  overflow-y: scroll;
+}
+
+.category-item {
+  color: rgba(17, 17, 17, 0.6);
+
+  font-size: 18px;
+  letter-spacing: -0.36px;
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+
+  & .active {
+    color: var(--accent-color);
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+
+.all-cat {
+  margin-bottom: 32px;
+
+  color: rgba(17, 17, 17, 0.6);
+  font-size: 18px;
+  // text-transform: uppercase;
+  letter-spacing: -0.36px;
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+
+  & .active {
+    color: var(--accent-color);
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+}
