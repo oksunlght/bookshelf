@@ -11,5 +11,5 @@ function onCategoryListFetch(list) {
     })
     .join('');
 
-  categoryList.innerHTML = `<ul class="category-list"><li class="all-cat"><a href="/" class="category-link active">All categories</a></li>${markup}</ul>`;
+  categoryList.innerHTML = `<ul class="category-list"><li class="all-cat"><a href="" class="category-link active">All categories</a></li>${markup}</ul>`;
 }

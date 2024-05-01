@@ -5,6 +5,7 @@ const homePage = document.querySelector('.books-wrapper');
 const pageTitle = document.querySelector('.title');
 const categoryList = document.querySelector('.single-category-list');
 const popularBooksWrapper = document.querySelector('.home-wrap');
+const loader = document.querySelector('.loader');
 
 categoryName.addEventListener('click', onCategoryClick);
 homePage.addEventListener('click', onMoreBtnClick);
@@ -22,11 +23,17 @@ function onCategoryClick(e) {
     return;
   }
 
+  showElem(loader);
+
   handleActiveLink(e);
 
-  BookApiService.getBooksByCategory(selectedCategory).then(data =>
-    onBooksByCategoryFetch(addTitleStyle(selectedCategory), data)
-  );
+  categoryList.innerHTML = '';
+  popularBooksWrapper.innerHTML = '';
+  BookApiService.getBooksByCategory(selectedCategory)
+    .then(data => onBooksByCategoryFetch(addTitleStyle(selectedCategory), data))
+    .finally(() => {
+      hideElem(loader);
+    });
 }
 
 function onBooksByCategoryFetch(category, books) {
@@ -92,4 +99,11 @@ function onMoreBtnClick(e) {
   BookApiService.getBooksByCategory(selectedCategory).then(data =>
     onBooksByCategoryFetch(addTitleStyle(selectedCategory), data)
   );
+}
+
+function showElem(elem) {
+  elem.classList.remove('visually-hidden');
+}
+function hideElem(elem) {
+  elem.classList.add('visually-hidden');
 }

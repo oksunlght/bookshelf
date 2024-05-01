@@ -1,11 +1,17 @@
 import BookApiService from './fetch-api';
 
 const homePage = document.querySelector('.home-wrap');
+const loader = document.querySelector('.loader');
 
 onMainPageFetch();
 
 function onMainPageFetch() {
-  BookApiService.getPopularBooks().then(onPopularBooksFetch);
+  BookApiService.getPopularBooks()
+    .then(onPopularBooksFetch)
+    .catch(e => console.log(e))
+    .finally(() => {
+      hideElem(loader);
+    });
 }
 
 function onPopularBooksFetch(books) {
@@ -28,5 +34,17 @@ function onPopularBooksFetch(books) {
 
   homePage.insertAdjacentHTML('beforeend', categoryBooksMarkup);
 }
+
+// const hideElem = elem => elem.classList.add('visually-hidden');
+
+function hideElem(elem) {
+  elem.classList.add('visually-hidden');
+}
+
+// const showElem = elem => elem.classList.remove('visually-hidden');
+
+// function showElem(elem) {
+//   elem.classList.remove('visually-hidden');
+// }
 
 export default onMainPageFetch;

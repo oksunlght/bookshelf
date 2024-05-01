@@ -14,42 +14,18 @@
     />
   </head>
   <body>
-    <header class="header">
-      <div class="header-container">
-        <a href="" class="logo">
-          <svg class="" width="24" height="24">
-            <use href="./images/sprite.svg#logo"></use>
-          </svg>
-          <svg class="" width="77" height="13">
-            <use href="./images/sprite.svg#logo-name"></use>
-          </svg>
-        </a>
-        <nav class="site-nav">
-          <ul class="nav-list">
-            <li class="nav-item current">
-              <a href=""><span class="nav-home">Home</span></a>
-            </li>
-            <li class="nav-item">
-              <a href="./shopping-list.html" class="shop-list"
-                >Shopping List
-                <svg class="" width="20" height="18">
-                  <use href="./images/sprite.svg#cart"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <label class="switch">
-          <input type="checkbox" />
-          <span class="slider round"></span>
-        </label>
-      </div>
-    </header>
+    <include src="./partials/header.html"></include>
     <main class="main">
       <div class="container main-container">
         <div>
           <!-- Category list -->
-          <section><div class="category-container"></div></section>
+          <section>
+            <div class="category-container">
+              <div class="loader-container">
+                <div class="list-loader"></div>
+              </div>
+            </div>
+          </section>
           <!-- slider -->
           <section class="charity-slider">
             <div class="charity-list-container"></div>
@@ -61,6 +37,7 @@
             Best Sellers <span class="title_highlight">Books</span>
           </h1>
           <div class="books-wrapper">
+            <div class="loader"></div>
             <ul class="single-category-list visually-hidden"></ul>
             <div class="home-wrap"></div>
           </div>
@@ -68,6 +45,7 @@
       </div>
       <!-- modal -->
       <include src="./partials/modal.html"></include>
+      <include src="./partials/login.html"></include>
     </main>
     <footer class="footer"></footer>
 
@@ -76,5 +54,8 @@
     <script type="module" src="./js/category.js"></script>
     <script type="module" src="./js/charity-widget.js"></script>
     <script type="module" src="./js/modal.js"></script>
+    <script type="module" src="./js/dark-mode.js"></script>
+    <script type="module" src="./js/login.js"></script>
+    <script type="module" src="./js/user-auth.js"></script>
   </body>
 </html>

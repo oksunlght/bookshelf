@@ -31,6 +31,10 @@
   color: var(--main-text-color);
   font-size: 48px;
   font-weight: 700;
+
+  &.dark {
+    color: var(--main-white-cl);
+  }
 }
 
 .category-title_highlight {

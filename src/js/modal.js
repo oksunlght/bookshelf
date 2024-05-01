@@ -3,8 +3,9 @@ import BookApiService from './fetch-api';
 const catgoryBooksList = document.querySelector('.single-category-list');
 const backdrop = document.querySelector('.backdrop');
 const bookContainer = document.querySelector('.book-wrapper');
-const closeModalBtn = document.querySelector('.pop-up-close');
+const closeModalBtn = document.querySelector('.pop-up-book');
 const homePage = document.querySelector('.home-wrap');
+const addToShoppingListBtn = document.querySelector('.purchase-button');
 
 catgoryBooksList.addEventListener('click', e => {
   e.preventDefault();
