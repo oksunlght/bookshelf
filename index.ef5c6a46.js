@@ -1,0 +1,6 @@
+var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?self:"undefined"!=typeof window?window:"undefined"!=typeof global?global:{},o={},t={},l=e.parcelRequired7c6;null==l&&((l=function(e){if(e in o)return o[e].exports;if(e in t){var l=t[e];delete t[e];var a={id:e,exports:{}};return o[e]=a,l.call(a.exports,a,a.exports),a.exports}var i=Error("Cannot find module '"+e+"'");throw i.code="MODULE_NOT_FOUND",i}).register=function(e,o){t[e]=o},e.parcelRequired7c6=l),l.register;var a=l("i3bGI");const i=document.querySelector(".home-wrap"),r=document.querySelector(".loader");(0,a.default).getPopularBooks().then(function(e){let o=e.map(({list_name:e,books:o})=>{let t=`<h2 class="home-category-title">${e}</h2>`,l=o.map(({author:e,book_image:o,title:t,_id:l})=>`<li class="home__book-item" data-id="${l}">
+          <img src="${o}" alt="${t}" class="book-image" />
+          <p class="book-title">${t}</p>
+          <p class="book-author">${e}</p>
+          </li>`).join("");return`${t}<ul class="home__category-books">${l}</ul><button type="submit" class="more-btn" data-list="${e}">See more</button>`}).join("");i.insertAdjacentHTML("beforeend",o)}).catch(e=>console.log(e)).finally(()=>{!function(e){e.classList.add("visually-hidden")}(r)});
+//# sourceMappingURL=index.ef5c6a46.js.map
